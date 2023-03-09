@@ -1,5 +1,12 @@
 package token
 
+type TokenType string
+
+type Token struct {
+	Type    TokenType
+	Literal string
+}
+
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
@@ -25,9 +32,24 @@ const (
 	LET      = "LET"
 )
 
-type TokenType string
+/*
 
-type Token struct {
-	Type    TokenType
-	Literal string
-}
+ILLEGAL : 불법적인 ( 잘못된 토큰을 나타내는 상수입니다)
+EOF : end of line (소스코드의 킅을 나타내는 토큰입니다.)
+
+
+IDENT[Identifier] : 식별자
+ASSIGN : 할당하다, 배당하다
+
+COMMA : 쉼표
+SEMICOLON : 세미콜론
+
+LPAREN[left parenthesis]
+RPAREN[right parenthesis]
+LBRACE[left brace]
+RBRACE[right brace]
+
+FUNCTION : FUNCTION
+LET : LET
+
+*/
